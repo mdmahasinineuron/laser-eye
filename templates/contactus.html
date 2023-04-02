@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+		#form-container {
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.3);
+			max-width: 400px;
+			width: calc(50% - 40px);
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+		h2 {
+			text-align: center;
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		input[type="text"], select {
+			width: 100%;
+			padding: 12px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			margin-bottom: 16px;
+		}
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			float: right;
+		}
+		input[type="submit"]:hover {
+			background-color: #45a049;
+		}
+		iframe {
+			width: 50%;
+			height: 360px;
+			border: none;
+		}
+	</style>
+</head>
+<body>
+	<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+	<div id="form-container">
+		<form action="/submit-form" method="POST">
+			<h2>Contact Us</h2>
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required>
+			<label for="phone">Phone Number:</label>
+			<input type="text" id="phone" name="phone" required>
+			<label for="age">Age:</label>
+			<select id="age" name="age">
+				<option value="">Select your age</option>
+				{% for i in range(1, 131) %}
+					<option value="{{ i }}">{{ i }}</option>
+				{% endfor %}
+			</select>
+			<label for="city">City:</label>
+			<select id="city" name="city">
+				<option value="">Select your city</option>
+				<option value="Bangalore">Bangalore</option>
+				<option value="Pune">Pune</option>
+				<option value="Kolkata">Kolkata</option>
+				<option value="Chennai">Chennai</option>
+				<option value="Mumbai">Mumbai</option>
+			</select>
+			<label for="service-type">Service Type:</label>
+			<select id="service-type" name="service-type">
+				<option value="">Select your service type</option>
+				<option value="Lasik">Lasik</option>
+				<option value="Cataract">Cataract</option>
+			</select>
+			<input type="submit" value="submit">

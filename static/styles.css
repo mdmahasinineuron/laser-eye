@@ -1,0 +1,138 @@
+/* Reset the default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply a beautiful background color */
+body {
+  background-color: #f5f5f5;
+}
+
+/* Add a beautiful font */
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Create a beautiful header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 30px;
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Create a beautiful banner */
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  background-image: url("https://source.unsplash.com/random/1600x900");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.banner h2 {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Create a beautiful section */
+section {
+  padding: 50px;
+}
+
+section h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+section p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Create a beautiful footer */
+footer {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+/* Add media queries for responsive design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+  
+  header nav ul {
+    margin-top: 20px;
+    justify-content: center;
+  }
+  
+  header nav ul li {
+    margin: 0 10px;
+  }
+  
+  .banner {
+    height: 300px;
+  }
+  
+  .banner h2 {
+    font-size: 36px;
+  }
+  
+  section {
+    padding: 30px;
+  }
+  
+  section h2 {
+    font-size: 24px;
+  }
+  
+  section p {
+    font-size: 16px;
+  }
+  
+  footer p {
+    font-size: 12px;
+  }
+}
